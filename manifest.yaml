@@ -1,7 +1,7 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: default
   name: my-app
 spec:
   replicas: 3
@@ -22,6 +22,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  namespace: default
   name: my-app-service
 spec:
   type: NodePort
